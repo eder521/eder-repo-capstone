@@ -11,8 +11,8 @@ phases:
     commands:
       - echo build Docker image on `date`
       - cd src
-      - docker build -t 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest .
-      - docker tag 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
+      - docker build -t eder-capstone-repo:latest .
+      - docker tag eder-capstone-repo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
