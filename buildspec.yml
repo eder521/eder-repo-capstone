@@ -6,19 +6,14 @@ phases:
   pre_build:
     commands:
       - echo logging in to AWS ECR...
-      - $(aws ecr get-login --no-include-email --region us-east-1)
+      - $(aws ecr get-login --no-include-email --region us-west-2)
   build:
     commands:
       - echo build Docker image on `date`
-      - cd src
       - docker build -t eder-capstone-repo:latest .
       - docker tag eder-capstone-repo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-<<<<<<< HEAD
       - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
-=======
-      - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
->>>>>>> bb6e7a9193ab1f236ba9d0a825fe676dd06a1ce0
