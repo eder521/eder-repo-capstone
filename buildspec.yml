@@ -16,4 +16,8 @@ phases:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
+<<<<<<< HEAD
       - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
+=======
+      - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
+>>>>>>> 3331adf62ac67d5dbd8758a5686b6576636003d0
