@@ -14,7 +14,7 @@ phases:
       - docker build -t eder-capstone-repo:latest .
         - docker tag eder-capstone-repo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
   post_build:
-    commands:cadsxzx
+    commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
       - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/eder-capstone-repo:latest
